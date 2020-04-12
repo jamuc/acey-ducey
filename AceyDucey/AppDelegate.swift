@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  AceyDucey
-//
-//  Created by Jason Franklin on 12.04.20.
-//  Copyright © 2020 Jason Franklin. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
