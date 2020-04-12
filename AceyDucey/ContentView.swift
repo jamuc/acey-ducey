@@ -1,16 +1,18 @@
-//
-//  ContentView.swift
-//  AceyDucey
-//
-//  Created by Jason Franklin on 12.04.20.
-//  Copyright © 2020 Jason Franklin. All rights reserved.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @State private var displayGameRules = true
+
     var body: some View {
-        Text("Hello, World!")
+        HStack {
+            Text("Hello, World!")
+        }.sheet(isPresented: $displayGameRules) {
+            VStack {
+                RulesView()
+                Spacer()
+                StartButtonView()
+            }
+        }
     }
 }
 
