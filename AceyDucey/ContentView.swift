@@ -1,16 +1,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var displayGameRules = true
+    @EnvironmentObject  var settings: UserSettings
 
     var body: some View {
         HStack {
             Text("Hello, World!")
-        }.sheet(isPresented: $displayGameRules) {
+        }.sheet(isPresented: $settings.displayGameRules) {
             VStack {
                 RulesView()
                 Spacer()
-                StartButtonView()
+                StartButtonView().environmentObject(self.settings)
             }
         }
     }

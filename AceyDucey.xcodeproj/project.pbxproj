@@ -17,6 +17,7 @@
 		F74DD2D324434B35002F6DC7 /* AceyDuceyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74DD2D224434B35002F6DC7 /* AceyDuceyUITests.swift */; };
 		F74DD2E124436809002F6DC7 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74DD2E024436809002F6DC7 /* RulesView.swift */; };
 		F74DD2E324436A9D002F6DC7 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74DD2E224436A9C002F6DC7 /* StartButtonView.swift */; };
+		F7E37F0024444D2F00A25AFA /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E37EFF24444D2F00A25AFA /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F74DD2D424434B35002F6DC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F74DD2E024436809002F6DC7 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 		F74DD2E224436A9C002F6DC7 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		F7E37EFF24444D2F00A25AFA /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				F74DD2B224434B2F002F6DC7 /* SceneDelegate.swift */,
 				F74DD2B424434B2F002F6DC7 /* ContentView.swift */,
 				F74DD2E224436A9C002F6DC7 /* StartButtonView.swift */,
+				F7E37EFF24444D2F00A25AFA /* UserSettings.swift */,
 				F74DD2E024436809002F6DC7 /* RulesView.swift */,
 				F74DD2B624434B34002F6DC7 /* Assets.xcassets */,
 				F74DD2BB24434B34002F6DC7 /* LaunchScreen.storyboard */,
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F74DD2E124436809002F6DC7 /* RulesView.swift in Sources */,
+				F7E37F0024444D2F00A25AFA /* UserSettings.swift in Sources */,
 				F74DD2B124434B2F002F6DC7 /* AppDelegate.swift in Sources */,
 				F74DD2B324434B2F002F6DC7 /* SceneDelegate.swift in Sources */,
 				F74DD2E324436A9D002F6DC7 /* StartButtonView.swift in Sources */,

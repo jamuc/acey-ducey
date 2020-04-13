@@ -30,10 +30,11 @@ struct PulsatingOverlay: ViewModifier {
 }
 
 struct StartButtonView: View {
+    @EnvironmentObject  var settings: UserSettings
 
     var body: some View {
         Button(action: {
-            // my action
+            self.settings.displayGameRules = false
         }) {
             Text("START")
         }
