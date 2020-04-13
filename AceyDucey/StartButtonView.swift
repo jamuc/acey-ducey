@@ -17,19 +17,20 @@ struct PulsatingOverlay: ViewModifier {
             Circle()
                 .stroke(Color.blue)
                 .scaleEffect(animationValue)
-                .opacity(Double(2 - animationValue))
+                .opacity(Double(1.5 - animationValue))
                 .animation(
                     Animation.easeOut(duration: 1)
                         .repeatForever(autoreverses: false)
                 )
         )
         .onAppear {
-            self.animationValue = 2
+            self.animationValue = 1.5
         }
     }
 }
 
 struct StartButtonView: View {
+
     var body: some View {
         Button(action: {
             // my action
