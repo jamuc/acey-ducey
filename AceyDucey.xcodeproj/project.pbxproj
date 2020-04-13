@@ -17,7 +17,10 @@
 		F74DD2D324434B35002F6DC7 /* AceyDuceyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74DD2D224434B35002F6DC7 /* AceyDuceyUITests.swift */; };
 		F74DD2E124436809002F6DC7 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74DD2E024436809002F6DC7 /* RulesView.swift */; };
 		F74DD2E324436A9D002F6DC7 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74DD2E224436A9C002F6DC7 /* StartButtonView.swift */; };
+		F7929CF924448D3200167188 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7929CF824448D3200167188 /* Card.swift */; };
+		F7929CFB24448DB900167188 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7929CFA24448DB900167188 /* Deck.swift */; };
 		F7E37F0024444D2F00A25AFA /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E37EFF24444D2F00A25AFA /* UserSettings.swift */; };
+		F7E37F022444589F00A25AFA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E37F012444589F00A25AFA /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +57,10 @@
 		F74DD2D424434B35002F6DC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F74DD2E024436809002F6DC7 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 		F74DD2E224436A9C002F6DC7 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		F7929CF824448D3200167188 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F7929CFA24448DB900167188 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		F7E37EFF24444D2F00A25AFA /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		F7E37F012444589F00A25AFA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +111,11 @@
 		F74DD2AF24434B2F002F6DC7 /* AceyDucey */ = {
 			isa = PBXGroup;
 			children = (
+				F7E37F052444592F00A25AFA /* GameView */,
+				F7E37F042444591100A25AFA /* Core */,
+				F7E37F03244458FE00A25AFA /* IntroductionScreen */,
 				F74DD2B024434B2F002F6DC7 /* AppDelegate.swift */,
 				F74DD2B224434B2F002F6DC7 /* SceneDelegate.swift */,
-				F74DD2B424434B2F002F6DC7 /* ContentView.swift */,
-				F74DD2E224436A9C002F6DC7 /* StartButtonView.swift */,
-				F7E37EFF24444D2F00A25AFA /* UserSettings.swift */,
-				F74DD2E024436809002F6DC7 /* RulesView.swift */,
 				F74DD2B624434B34002F6DC7 /* Assets.xcassets */,
 				F74DD2BB24434B34002F6DC7 /* LaunchScreen.storyboard */,
 				F74DD2BE24434B34002F6DC7 /* Info.plist */,
@@ -143,6 +148,34 @@
 				F74DD2D424434B35002F6DC7 /* Info.plist */,
 			);
 			path = AceyDuceyUITests;
+			sourceTree = "<group>";
+		};
+		F7E37F03244458FE00A25AFA /* IntroductionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F74DD2E024436809002F6DC7 /* RulesView.swift */,
+				F74DD2E224436A9C002F6DC7 /* StartButtonView.swift */,
+			);
+			path = IntroductionScreen;
+			sourceTree = "<group>";
+		};
+		F7E37F042444591100A25AFA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F7E37EFF24444D2F00A25AFA /* UserSettings.swift */,
+				F7929CF824448D3200167188 /* Card.swift */,
+				F7929CFA24448DB900167188 /* Deck.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F7E37F052444592F00A25AFA /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				F74DD2B424434B2F002F6DC7 /* ContentView.swift */,
+				F7E37F012444589F00A25AFA /* CardView.swift */,
+			);
+			path = GameView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,12 +309,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7929CFB24448DB900167188 /* Deck.swift in Sources */,
+				F7E37F022444589F00A25AFA /* CardView.swift in Sources */,
 				F74DD2E124436809002F6DC7 /* RulesView.swift in Sources */,
 				F7E37F0024444D2F00A25AFA /* UserSettings.swift in Sources */,
 				F74DD2B124434B2F002F6DC7 /* AppDelegate.swift in Sources */,
 				F74DD2B324434B2F002F6DC7 /* SceneDelegate.swift in Sources */,
 				F74DD2E324436A9D002F6DC7 /* StartButtonView.swift in Sources */,
 				F74DD2B524434B2F002F6DC7 /* ContentView.swift in Sources */,
+				F7929CF924448D3200167188 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
