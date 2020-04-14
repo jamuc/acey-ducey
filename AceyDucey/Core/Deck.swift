@@ -13,10 +13,7 @@ class Deck {
                 cards.append(card)
             }
         }
-    }
 
-    func createDeck() -> [Card] {
         cards.shuffle()
-        return cards
     }
 }
