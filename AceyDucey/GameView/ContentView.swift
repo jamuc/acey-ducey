@@ -45,17 +45,42 @@ struct ContentView: View {
                 StartButtonView().environmentObject(self.settings)
             }
         }
+        .alert(isPresented: $displayAlert) {
+            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK"), action: nextRound))
+        }
+    }
+
+    func nextRound() {
+        displayThirdCard = false
+        betPlaced = ""
+
+        // check if next round can be played (more than 3 cards left)
+        cards.remove(at: 0)
+        cards.remove(at: 0)
+        cards.remove(at: 0)
     }
 
     func placeBet() {
         displayThirdCard = true
 
-        if cards[0] < cards[3],
-            cards[3] < cards[1] {
-            print("You won lucky you")
-        } else {
-            print("You lost, unlucky you")
+        let won = cards[0] < cards[3] && cards[3] < cards[1]
+        let bet = Int(betPlaced) ?? 0
+
+        if won && bet == 0 {
+            alertTitle = "You should have place a bet"
+            alertMessage = "If you would have placed a bet you would have won some money"
+        } else if won && bet != 0 {
+            alertTitle = "You won!!"
+            alertMessage = "Well done, you won"
+        } else if !won && bet == 0 {
+            alertTitle = "Well done"
+            alertMessage = "You where right not to bet. Your would have lost"
+        } else if !won && bet != 0 {
+            alertTitle = "Ouch, sorry"
+            alertMessage = "You lost this round"
         }
+
+        displayAlert = true
     }
 }
 
