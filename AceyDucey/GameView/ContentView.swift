@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject  var settings: UserSettings
 
-    @State private var cardDeck = Deck()
+    @State private var cards = Deck().createDeck()
     @State private var betPlaced = ""
 
     var body: some View {
@@ -12,21 +12,18 @@ struct ContentView: View {
                 Text("Acey Ducey")
                     .font(.largeTitle)
 
-                HStack(alignment: .center, spacing: 20) {
-                    CardView(card: cardDeck.cards[0])
-                    CardView(card: cardDeck.cards[1])
+                HStack(alignment: .center, spacing: CGFloat(20.0)) {
+                    CardView(card: cards[0])
+                    CardView(card: cards[1])
                 }
 
                 TextField("Place bet", text: $betPlaced)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 Spacer()
-                Text("Cards remaining: \(cardDeck.cards.count)")
+                Text("Cards remaining: \(cards.count)")
             }
             .navigationBarItems(trailing: Text("$ 100"))
-        }
-        .onAppear {
-            self.cardDeck.shuffle()
         }
         .sheet(isPresented: $settings.displayGameRules) {
             VStack {

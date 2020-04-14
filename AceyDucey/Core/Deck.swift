@@ -15,7 +15,8 @@ class Deck {
         }
     }
 
-    func shuffle() {
+    func createDeck() -> [Card] {
         cards.shuffle()
+        return cards
     }
 }
